@@ -14,8 +14,38 @@
 | path to your installation.
 |
 */
-$config['base_url']	= '';
+$configVars = array();
+$configVars["OSDIRECTORY"] = "\\";
+if($_SERVER['HTTP_HOST']=="localhost"  or $_SERVER['HTTP_HOST']=="ewebserver")
+{
+    if($_SERVER['HTTP_HOST'] == 'localhost') {
+       $_SERVER['HTTP_HOST'] = 'ewebserver';
+    }
+    
+    $configVars["siteURL"]              = 'http://'.$_SERVER['HTTP_HOST'].'/task_assignment/codeignite/php';
+    $current_path = str_replace("\\","/",__FILE__);
+    $configVars["sitePath"] = substr($current_path,0,strpos($current_path,'/application'));
+    $configVars["imageDir"]             = 'http://'.$_SERVER['HTTP_HOST'].'/task_assignment/codeignite/php/assets/img';    
 
+
+}elseif($_SERVER['HTTP_HOST']=="www.nsc.org.in" || $_SERVER['HTTP_HOST']=="nsc.org.in")
+{
+    $configVars["siteURL"]              = 'http://'.$_SERVER['HTTP_HOST'].'/dashboard';
+    $current_path = str_replace("\\","/",__FILE__);
+    $configVars["sitePath"] = substr($current_path,0,strpos($current_path,'/application'));
+    $configVars["imageDir"]             = 'http://'.$_SERVER['HTTP_HOST'].'/dashboard/assets/img';    
+
+}
+
+/*echo '<pre>';
+print_r($configVars);
+echo '</pre>';
+exit;*/
+$config['base_url']	= $configVars["siteURL"];
+
+define('siteURL', $configVars["siteURL"]);
+define('sitePath',$configVars["sitePath"]);
+define('imageDir',$configVars["imageDir"]);
 /*
 |--------------------------------------------------------------------------
 | Index File
@@ -224,7 +254,7 @@ $config['cache_path'] = '';
 | MUST set an encryption key.  See the user guide for info.
 |
 */
-$config['encryption_key'] = '';
+$config['encryption_key'] = 'xyzquptebbadfsafstjhsdg';
 
 /*
 |--------------------------------------------------------------------------
