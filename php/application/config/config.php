@@ -28,12 +28,12 @@ if($_SERVER['HTTP_HOST']=="localhost"  or $_SERVER['HTTP_HOST']=="ewebserver")
     $configVars["imageDir"]             = 'http://'.$_SERVER['HTTP_HOST'].'/task_assignment/codeignite/php/assets/img';    
 
 
-}elseif($_SERVER['HTTP_HOST']=="codeignite-taskassignment.rhcloud.com")
+}elseif($_SERVER['HTTP_HOST']=="www.nsc.org.in" || $_SERVER['HTTP_HOST']=="nsc.org.in")
 {
-    $configVars["siteURL"]              = 'http://'.$_SERVER['HTTP_HOST'];
+    $configVars["siteURL"]              = 'http://'.$_SERVER['HTTP_HOST'].'/dashboard';
     $current_path = str_replace("\\","/",__FILE__);
     $configVars["sitePath"] = substr($current_path,0,strpos($current_path,'/application'));
-    $configVars["imageDir"]             = 'http://'.$_SERVER['HTTP_HOST'].'/assets/img';    
+    $configVars["imageDir"]             = 'http://'.$_SERVER['HTTP_HOST'].'/dashboard/assets/img';    
 
 }
 

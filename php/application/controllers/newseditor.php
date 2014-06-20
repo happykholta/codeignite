@@ -70,7 +70,8 @@ class Newseditor extends CI_Controller {
         $id=$_GET['id'];
         //exit;
         $this->load->model('tbnews');
-        $setVarialble=$this->tbnews->getnews($id);      
+        $setVarialble=$this->tbnews->getnews($id);
+       
         echo json_encode($setVarialble);
         exit;
 

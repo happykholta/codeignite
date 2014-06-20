@@ -21,25 +21,12 @@ function clearText(field)
 	<div class="templatemo_container">
 		
         <div id="templatemo_content_area" style="border:1px solid black">
-            <div id="templatemo_left"  style="border:1px solid black">
+          <div id="templatemo_left"  style="border:1px solid black">
             	<h1>TODAYS HEADLINES</h1>
-                 <div style="border:0px solid red;float:left"><img src="<?php echo imageDir;?>/templatemo_128_wood_site.jpg" alt="XHTML Template" class="left_img"  / ></div>
-                 
-               <div id="news" style="border:0px solid red;float:right; width:75%"></div>
-                      <div style="clear:both;">&nbsp;
-                      
-                      </div>
-<div style="border:0px solid red;float:left"><img src="<?php echo imageDir;?>/templatemo_128_wood_site.jpg" alt="XHTML Template" class="left_img"  / ></div>
-                 
-               <div style="border:0px solid red;float:right; width:75%"> <p style="float:right;">Virtual Template is a
-                    <a href="http://www.templatemo.com/page/1" target="_parent">free CSS layout </a>
-                     provided by <a href="http://www.templatemo.com/page/1" target="_parent">templatemo.com</a> 
-                     website. Credit goes to <a href="http://www.smashingmagazine.com" target="_blank">Smashing Magazine</a>
-                      for icons used in this template. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium vo iatelupti.Fanenon provident, similique sunt in culpa qui officia deserunt.
-                      </p></div>
-
-
-                
+                <div class="outer">
+                    <div id="rmv">To see the todays hadline plese select categories</div>
+                    
+                </div>
           </div><!-- End Of templatemo_left -->
             
             <div id="templatemo_right">
@@ -121,31 +108,52 @@ Marceset isis th  quam pulvinar semper volutv. Maecenas i iat est suscipit euism
 <script>
             $(document).ready(function(){
             $('.link').click(function(){
+                //alert('hello');
+                //return false;
             $.ajax({
                     type: "GET",
                     url: '<?php echo site_url();?>/newseditor/display',
                     data:{id:this.id},
                     dataType: "json",                    
-                    success: function(ResponseData) {
-                                  //alert(ResponseData.length);
-                                  for(var i=0;i<=ResponseData.length ;i++){
-                                    // alert(ResponseData[i].id);
-                                      $('#news').html('<h1>'+ResponseData[i].newstitle+'</h1>');
+                    success: function(ResponseData){
+                                  var text="";
+                                  var i;
+                                  for(i=0;i<ResponseData.length ;i++){
+
+                                 //   alert(ResponseData[i].newstitle);
+                                      text+="<div style=\"border:0px solid red;float:left\">"+ResponseData[i].Author+"</div>";
+                    
+                     
+                   text+= "<div class=\"news\" style=\"border:0px solid red;float:right; width:75%\">"+ResponseData[i].newstitle+ "<p>"+ResponseData[i].text+"</p></div>";
+                    text+="<div style=\"clear:both;\">&nbsp;</div>";
+
+                                    
+                                      
+                                            }
+                                                      
+                                        
+                                      
+                                  $('.outer').html(text);
+                                 
+
                                   }
+                    
 
-                                 //alert(ResponseData);
-                                 return false;
-                     /* while(ResponseData){
-                      $('#news').html('<h1>'+ResponseData.newstitle+'</h1>');
-                   // $('#news').html('<img src="'+res+'" height=\"850\" width=\"850\">');
-                      }*/
-            
-            }
+                                
+            });
+            });
 
     });
-    });
-});
+          /*  text+="<div style=\"border:0px solid red;float:left\">"+ResponseData[i].Author+"</div>"+
+                    
+                     
+                    "<div class=\"news\" style=\"border:0px solid red;float:right; width:75%\">"+ResponseData[i].newstitle+ "<p>"+ResponseData[i].text+"</p></div>"+
+                    "<div style=\"clear:both;\">&nbsp;</div>"; */
+                      
+                    
+    
     </script>
 
 </body>
 </html>
+

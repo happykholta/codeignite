@@ -29,19 +29,22 @@ class Tbnews extends CI_Model {
    public function getnews($dataid)
    {
        //print_r($dataid);
-        $sql = "select * from tb_news where categorey=\"".$dataid."\" ";
+       $sql = "select * from tb_news where categorey=\"".$dataid."\" ";
         
         
         $recordset= mysql_query($sql);
      
        
-        //$result= mysql_fetch_assoc($recordset);
-        
+       //$result= mysql_fetch_assoc($recordset);
+       
+       
         while($result=mysql_fetch_assoc($recordset))
         {
             $newresult[]=$result;
+           // $newresult['msg']='y';
             
         }
+        
         return $newresult;
    }
 
