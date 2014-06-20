@@ -124,7 +124,7 @@ function clearText(field)
                                       text+="<div style=\"border:0px solid red;float:left\"><u>"+ResponseData[i].Author+"</u></div>";
                     
                      
-                   text+= "<div class=\"news\" style=\"border:0px solid red;float:right; width:75%\">"+ResponseData[i].newstitle+ "<p>"+ResponseData[i].text+"</p></div>";
+                   text+= "<div class=\"news\" style=\"border:0px solid red;float:right; width:75%\"><u>"+ResponseData[i].newstitle+ "</u><p>"+ResponseData[i].text+"</p></div>";
                     text+="<div style=\"clear:both;\">&nbsp;</div>";
 
                                     
