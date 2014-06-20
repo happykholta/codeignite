@@ -9,13 +9,7 @@
 <script type="text/javascript" src="<?php echo base_url();?>assets/js/jquery-1.10.2.min.js"></script>
 
 <link href="<?php echo base_url();?>assets/css/templatemo_style.css" rel="stylesheet" type="text/css" />
-<script language="javascript" type="text/javascript">
-function clearText(field)
-{
-    if (field.defaultValue == field.value) field.value = '';
-    else if (field.value == '') field.value = field.defaultValue;
-}
-</script>
+
 </head>
 <body>
 	<div class="templatemo_container">
@@ -41,13 +35,13 @@ function clearText(field)
                     	<form action="<?php echo site_url();?>/newseditor/login" method="post">
                         	<div class="templaetmo_form_row">
                                 <label>UserName:</label>
-                                <input type="text" value="your Username" name="Uname" id='Uname' class="field" title="email" onfocus="clearText(this)" onblur="clearText(this)" />
+                                <input type="text" placeholder="Username" name="Uname" id='Uname'/>
                                 <div class="cleaner"></div>
                             </div>
                             
 							<div class="templaetmo_form_row">
                                 <label>Password:</label>
-                                <input type="password" value="password" name="pass" id="pass" class="field" title="password" onfocus="clearText(this)" onblur="clearText(this)" id="password" />
+                                <input type="password" placeholder="123456" name="pass" id="pass" />
                                  <div class="cleaner"></div>
                             </div>
                             
