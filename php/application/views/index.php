@@ -20,8 +20,8 @@ function clearText(field)
 <body>
 	<div class="templatemo_container">
 		
-        <div id="templatemo_content_area" style="border:1px solid black">
-          <div id="templatemo_left"  style="border:1px solid black">
+        <div id="templatemo_content_area" style="border:0px solid black">
+          <div id="templatemo_left"  style="border:0px solid black">
             	<h1>TODAYS HEADLINES</h1>
                 <div class="outer">
                     <div id="rmv">To see the todays hadline plese select categories</div>
@@ -87,9 +87,9 @@ function clearText(field)
             
             	<div class="templatemo_section_2">
                 	<img src="<?php echo imageDir;?>/templaetmo_img_1.jpg" alt="dice" />
-               		<h1>Mauris in pulvinar risus</h1>
-                    <p>Nsunc hendrerit sapien quis th  quam put ehef
-Nuilla dignissim viverra tortor, ultrices al hic ti. Maecenas ist suscipit euismoi tiaosi dales molestie convallis. Aliquam erat vo.</p>
+               		<h1>Description</h1>
+                    <p> In the above the news is displayed directly from the database.The News Edditor who is authorized
+                    to login can feed the news to different categories which is desplayed in the above section.</p>
                 </div>
                 
                 <div class="templatemo_section_2">
