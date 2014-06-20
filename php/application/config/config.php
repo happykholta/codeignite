@@ -16,26 +16,14 @@
 */
 $configVars = array();
 $configVars["OSDIRECTORY"] = "\\";
-if($_SERVER['HTTP_HOST']=="localhost"  or $_SERVER['HTTP_HOST']=="ewebserver")
-{
-    if($_SERVER['HTTP_HOST'] == 'localhost') {
-       $_SERVER['HTTP_HOST'] = 'ewebserver';
-    }
-    
-    $configVars["siteURL"]              = 'http://'.$_SERVER['HTTP_HOST'].'/task_assignment/codeignite/php';
-    $current_path = str_replace("\\","/",__FILE__);
-    $configVars["sitePath"] = substr($current_path,0,strpos($current_path,'/application'));
-    $configVars["imageDir"]             = 'http://'.$_SERVER['HTTP_HOST'].'/task_assignment/codeignite/php/assets/img';    
+$_SERVER['HTTP_HOST']== "codeignite-taskassignment.rhcloud.com";
 
-
-}elseif($_SERVER['HTTP_HOST']=="codeignite-taskassignment.rhcloud.com")
-{
     $configVars["siteURL"]              = 'http://'.$_SERVER['HTTP_HOST'];
     $current_path = str_replace("\\","/",__FILE__);
     $configVars["sitePath"] = substr($current_path,0,strpos($current_path,'/application'));
     $configVars["imageDir"]             = 'http://'.$_SERVER['HTTP_HOST'].'/assets/img';    
 
-}
+
 
 /*echo '<pre>';
 print_r($configVars);
