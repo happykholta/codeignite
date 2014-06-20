@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Virtual Site, XHTML CSS Template, Free Download</title>
+<title>CodeIgniter</title>
 <meta name="keywords" content="Virtual Site, XHTML CSS Template, Free Download" />
 <meta name="description" content="Virtual Site - Free CSS Template, Free XHTML CSS Layout" />
 <script type="text/javascript" src="<?php echo base_url();?>assets/js/jquery-1.10.2.min.js"></script>
