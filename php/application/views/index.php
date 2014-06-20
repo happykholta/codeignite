@@ -86,17 +86,17 @@ function clearText(field)
             <div class="templatemo_one_col last">
             
             	<div class="templatemo_section_2">
-                	<img src="<?php echo imageDir;?>/templaetmo_img_1.jpg" alt="dice" />
+                	<!--img src="<?php echo imageDir;?>/templaetmo_img_1.jpg" alt="dice" /-->
                		<h1>Description</h1>
                     <p> In the above the news is displayed directly from the database.The News Edditor who is authorized
                     to login can feed the news to different categories which is desplayed in the above section.</p>
                 </div>
                 
                 <div class="templatemo_section_2">
-                	<img src="<?php echo imageDir;?>/templaetmo_img_2.jpg" alt="box" />
-               		<h1>Crasnon dolor leifend</h1>
-                    <p>Mauris in pulvinar risus. Nunc hend reri omnis
-Marceset isis th  quam pulvinar semper volutv. Maecenas i iat est suscipit euismod enim, ege sodales molestie convallis. Aliquam eratl.</p>
+                	<!--img src="<?php echo imageDir;?>/templaetmo_img_2.jpg" alt="box" /-->
+               		<h1>News Editor Login</h1>
+                    <p>Username = happy</p>
+                    <p>Password = 123</p>
                 </div>
             
             </div><!-- End Of templatemo_one_col -->
