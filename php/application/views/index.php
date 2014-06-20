@@ -38,7 +38,7 @@ function clearText(field)
                     <div class="templatemo_sec_1_mid">
                     	<h1>News Editor Login</h1>
                         <?php echo $this->session->flashdata('msg');?>
-                    	<form action="<?php echo site_url("newseditor/login");?>" method="post">
+                    	<form action="<?php echo site_url();?>/newseditor/login" method="post">
                         	<div class="templaetmo_form_row">
                                 <label>UserName:</label>
                                 <input type="text" value="your Username" name="Uname" id='Uname' class="field" title="email" onfocus="clearText(this)" onblur="clearText(this)" />
