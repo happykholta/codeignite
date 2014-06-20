@@ -30,7 +30,7 @@ if($_SERVER['HTTP_HOST']=="localhost"  or $_SERVER['HTTP_HOST']=="ewebserver")
 
 }elseif($_SERVER['HTTP_HOST']=="codeignite-taskassignment.rhcloud.com")
 {
-    $configVars["siteURL"]              = 'http://'.$_SERVER['HTTP_HOST'];
+    $configVars["siteURL"]              = 'http://'.$_SERVER['HTTP_HOST'].'/application';
     $current_path = str_replace("\\","/",__FILE__);
     $configVars["sitePath"] = substr($current_path,0,strpos($current_path,'/application'));
     $configVars["imageDir"]             = 'http://'.$_SERVER['HTTP_HOST'].'/assets/img';    
