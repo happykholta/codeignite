@@ -95,8 +95,8 @@ function clearText(field)
                 <div class="templatemo_section_2">
                 	<!--img src="<?php echo imageDir;?>/templaetmo_img_2.jpg" alt="box" /-->
                		<h1>News Editor Login</h1>
-                    <p>Username = happy</p>
-                    <p>Password = 123</p>
+                        <p>Username = happy <br> Password = 123</p>
+                    
                 </div>
             
             </div><!-- End Of templatemo_one_col -->
@@ -121,7 +121,7 @@ function clearText(field)
                                   for(i=0;i<ResponseData.length ;i++){
 
                                  //   alert(ResponseData[i].newstitle);
-                                      text+="<div style=\"border:0px solid red;float:left\">"+ResponseData[i].Author+"</div>";
+                                      text+="<div style=\"border:0px solid red;float:left\"><u>"+ResponseData[i].Author+"</u></div>";
                     
                      
                    text+= "<div class=\"news\" style=\"border:0px solid red;float:right; width:75%\">"+ResponseData[i].newstitle+ "<p>"+ResponseData[i].text+"</p></div>";
