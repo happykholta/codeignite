@@ -42,15 +42,15 @@ class Newseditor extends CI_Controller {
                  //$this->load->view('nsctmp/dashboard');
                  //exit;
 
-                 echo "I logged in";
-                 exit;
+                /* echo "I logged in";
+                 exit;*/
                  redirect('Dashboard/index');
                  exit;
         
                 }else{
         
-                    echo "I m not logged in";
-                     exit;
+                  /*  echo "I m not logged in";
+                     exit;*/
                       $this->session->set_flashdata('msg', '<font style="color:red">Username and password incorrect</font>');
                       redirect('Welcome/index');
                       exit;
