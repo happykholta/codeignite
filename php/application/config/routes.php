@@ -41,11 +41,6 @@
 $route['default_controller'] = "welcome";
 $route['404_override'] = '';
 
-$route['newseditor/login'] = 'newseditor/login';
-$route['Dashboard/index'] = 'Dashboard/index';
-$route['Welcome/index'] = 'Welcome/index';
-
-
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
