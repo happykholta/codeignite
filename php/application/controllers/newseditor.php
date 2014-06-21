@@ -42,7 +42,7 @@ class Newseditor extends CI_Controller {
 
                 /* echo "I logged in";
                  exit;*/
-                 redirect('Dashboard/index');
+                 redirect('dashboard/index');
                  exit;
         
                 }else{
@@ -50,14 +50,14 @@ class Newseditor extends CI_Controller {
                   /*  echo "I m not logged in";
                      exit;*/
                       $this->session->set_flashdata('msg', '<font style="color:red">Username and password incorrect</font>');
-                      redirect('Welcome/index');
+                      redirect('welcome/index');
                       exit;
         
                  }
 
         }else{
                  $this->session->set_flashdata('msg', '<font style="color:red">plese fill the data</font>');
-                 redirect('Welcome/index');
+                 redirect('welcome/index');
                  exit;
         
         }
@@ -68,7 +68,7 @@ class Newseditor extends CI_Controller {
     public function logout()
     {
         $this->session->sess_destroy();
-        redirect('Welcome/index');
+        redirect('welcome/index');
         
     }
     public function display()

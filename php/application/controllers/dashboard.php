@@ -31,11 +31,11 @@ class Dashboard extends CI_Controller {
         if($result==1)
         {
             $this->session->set_flashdata('msg', '<font style="color:green">news add sucessful</font>');
-            redirect('Dashboard/index');
+            redirect('dashboard/index');
 
         }else{
             $this->session->set_flashdata('msg', '<font style="color:red">Error plese try again</font>');
-            redirect('Dashboard/index');
+            redirect('dashboard/index');
         }
 
     }
