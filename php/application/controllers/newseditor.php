@@ -19,46 +19,52 @@ class Newseditor extends CI_Controller {
 	 */
 	public function login()
 	{
-		print_r($_POST);
-		exit;
-        if(trim($_POST['Uname']) <> ''){
+     if(trim($_POST['Uname']) <> ''){
 
-     $username=$_POST['Uname'];
-     $pass=$_POST['pass'];
+             $username=$_POST['Uname'];
+             $pass=$_POST['pass'];
+        
+             /***************** import model ********************************/
+             $this->load->model('tbuser');
+             $setVarialble=$this->tbuser->verifylogin($username,$pass); 
+        
+             if(($setVarialble*1) > 0) {
+        
+                 ob_start();
+                 session_start();
+                 //$_SESSION['uname']=$username;
+                 $userinfo = array(
+                                     'uname' => $username
+                                   );
+                 $this->session->set_userdata($userinfo);
+        
+                 //$this->Dashboard->index();
+                 //$this->load->view('nsctmp/dashboard');
+                 //exit;
 
-     /***************** import model ********************************/
-     $this->load->model('tbuser');
-     $setVarialble=$this->tbuser->verifylogin($username,$pass); 
-
-     if(($setVarialble*1) > 0) {
-
-         ob_start();
-         session_start();
-         //$_SESSION['uname']=$username;
-         $userinfo = array(
-         'uname' => $username
-         );
-         $this->session->set_userdata($userinfo);
-
-         //$this->Dashboard->index();
-         //$this->load->view('nsctmp/dashboard');
-         //exit;
-         redirect('Dashboard/index');
+                 echo "I logged in";
+                 exit;
+                 redirect('Dashboard/index');
+                 exit;
+        
+                }else{
+        
+                    echo "I m not logged in";
+                     exit;
+                      $this->session->set_flashdata('msg', '<font style="color:red">Username and password incorrect</font>');
+                      redirect('Welcome/index');
+                      exit;
+        
+                 }
 
         }else{
+                 $this->session->set_flashdata('msg', '<font style="color:red">plese fill the data</font>');
+                 redirect('Welcome/index');
+                 exit;
+        
+        }
 
-          $this->session->set_flashdata('msg', '<font style="color:red">Username and password incorrect</font>');
-          redirect('Welcome/index');
-
-         }
-
-}else{
-     $this->session->set_flashdata('msg', '<font style="color:red">plese fill the data</font>');
-     redirect('Welcome/index');
-
-     }
-
-		$this->load->view('dashboard');
+		//$this->load->view('dashboard');
 	}
 
     public function logout()
