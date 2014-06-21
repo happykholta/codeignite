@@ -40,7 +40,7 @@
 
 $route['default_controller'] = "welcome";
 $route['404_override'] = '';
-$route['newseditor/login'] = 'newseditor/login';
+
 
 
 /* End of file routes.php */
