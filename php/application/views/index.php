@@ -69,10 +69,10 @@ function clearText(field)
                     <div class="templatemo_sec_1_mid">
                     	<h1>Categories</h1>
                     	<ul class="category_list">
-                            <li><a class="link" id="Political" href="#">political</a></li>
-                            <li><a class="link" id="Sports" href="#">sports</a></li>
-                            <li><a class="link" id="Share Market" href="#">share Market</a></li>
-                            <li class="last"><a class="link" id="Criminal" href="#">criminal</a></li>
+                            <li><a class="link" id="Political">political</a></li>
+                            <li><a class="link" id="Sports">sports</a></li>
+                            <li><a class="link" id="Share Market" >share Market</a></li>
+                            <li class="last"><a class="link" id="Criminal" >criminal</a></li>
                         </ul>
                     </div>
                     <div class="templatemo_sec_1_bottom"></div>
