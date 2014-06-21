@@ -19,6 +19,8 @@ class Newseditor extends CI_Controller {
 	 */
 	public function login()
 	{
+		print_r($_POST);
+		exit;
         if(trim($_POST['Uname']) <> ''){
 
      $username=$_POST['Uname'];
