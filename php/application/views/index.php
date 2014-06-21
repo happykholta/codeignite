@@ -52,7 +52,7 @@ function clearText(field)
                             </div>
                             
                             <div class="templaetmo_form_row last">
-                            	<input type="submit" name="login" value="Login" alt="Login" class="login" title="Login" />
+                            	<input type="submit" name="login" value="Login"  />
                                 <div class="cleaner"></div>
                             </div>
             			</form>
