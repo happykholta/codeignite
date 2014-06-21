@@ -19,8 +19,6 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-        echo 'abc';
-        exit;
 		$this->load->view('index');
 	}
 }
