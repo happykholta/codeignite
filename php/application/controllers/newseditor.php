@@ -38,9 +38,7 @@ class Newseditor extends CI_Controller {
                                    );
                  $this->session->set_userdata($userinfo);
         
-                 //$this->Dashboard->index();
-                 //$this->load->view('nsctmp/dashboard');
-                 //exit;
+                 
 
                 /* echo "I logged in";
                  exit;*/
